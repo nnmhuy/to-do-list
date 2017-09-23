@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta "charset=UTF-8" />
+        <title>To do list</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script type="text/javascript" src="./scripts.js" async></script>                    
+    </head>
+    <body>
+        <div>
+            <div>
+                <p> Registration Form </p>
+            </div>
+            <div id="main-div">
+                <div class="div-info">
+                    <label class="left-side">Name:</label> 
+                    <input id="input-name" type="text" class="right-side"/> 
+                </div>
+                <div class="div-info">
+                    <label class="left-side">Age:</label>
+                    <input id="input-age" type="number" min="0" max="999" class="right-side"/> 
+                </div>        
+                <div class="div-info">
+                    <label class="left-side">Gender:</label>
+                    <label for="male">Male</label> 
+                    <input type="radio" name="gender" id="male" value="Male"/>
+                    <label for="female"> Female </label>
+                    <input type="radio" name="gender" id="female" value="Female" />
+                </div>
+                <div class="div-info"> 
+                    <label class="left-side">City:</label>
+                    <select id= "input-city" class="right-side">
+                        <option value="HCM">HCM</option>
+                        <option value="HN">HN</option>
+                        <option value="DN">DN</option>
+                    </select>
+                </div>
+                <div class="div-info">
+                    <label class="left-side">DoB:</label>
+                    <input id="input-dob" type="date" name="dob" class="right-side">
+                </div>
+                <div class="div-info">
+                    <label class="left-side">Department:</label>
+                    <input type="checkbox" id="student" value="Student"/>
+                    <label for="student">Student</label>
+                    <input type="checkbox" id="teacher" value="Teacher"/>
+                    <label for="teacher">Teacher</label>
+                    <input type="checkbox" id="parent" value="Parent"/>
+                    <label for="parent">Parent</label>
+                </div>
+            </div>
+            <div>
+                <button id="submit" type="button">Submit</button>
+            </div>
+        </div>
+    </body>
+</html>
