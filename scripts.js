@@ -1,38 +1,67 @@
 "use strict"
-var n_element = 0;
+var task_num = 0, task_count = 0;
 
 
-function delete_div(div_id)
+
+/* new task button */
+function new_task()
 {
-    var main_div = document.getElementById("main-div");
-    var to_del = document.getElementById(div_id);
-    if (confirm("You want to delete this one?") == true)
-        main_div.removeChild(to_del);
+    document.getElementById("new-task-content").style.display = 'block';
+    document.getElementById("new-buttons").style.display = 'block';
+}
+
+document.getElementById("new-tag-div").addEventListener("click", new_task);
+
+
+/* cancel new task */
+function cancel()
+{
+    document.getElementById("new-task-content").value = "";
+    document.getElementById("new-task-content").style.display = 'none';
+    document.getElementById("new-buttons").style.display = 'none';
+}
+
+/* save new task */
+function save()
+{
+    var task = document.getElementById("new-task-content");
+    create_task(task.value);
+    task.value = "";
+    document.getElementById("new-task-content").style.display = 'none';
+    document.getElementById("new-buttons").style.display = 'none';
 }
 
 
-function newTextBox()
+
+/* create task */
+function create_task(task)
 {
-    ++n_element;
-    var newcheckbox = document.createElement("input");
-    newcheckbox.id = "text" + n_element;
-    newcheckbox.name = "text" + n_element;
-    newcheckbox.type = "checkbox";
-    var newtext = document.createElement("span");
-    newtext.for = "text" + n_element;
-    newtext.innerHTML = "text" + n_element;
-    var newbutton = document.createElement("button");
-    newbutton.value = "Delete";    
-    var newDiv = document.createElement("div");
-    newDiv.id = "text" + n_element;
-    newDiv.appendChild(newcheckbox);
-    newDiv.appendChild(newtext);
-    newDiv.appendChild(newbutton);
-    document.getElementById("main-div").appendChild(newDiv);
-    newbutton.addEventListener("click", function()
+    ++task_count;
+    ++task_num;
+    var new_div = document.createElement("div");
+    new_div.className = "undone-task";
+    new_div.id = "task " + task_num;
+    var new_checkbox = document.createElement("input");
+    new_checkbox.type = "checkbox";
+    var new_span = document.createElement("span");
+    new_span.className = "task-content";
+    new_span.innerHTML = task;
+    var new_del_button = document.createElement("img");
+    new_del_button.src = "del-button.png";
+    new_del_button.alt = "DELETE";
+    new_div.appendChild(new_checkbox);
+    new_div.appendChild(new_span);
+    new_div.appendChild(new_del_button);
+    document.getElementById("tasks-list").appendChild(new_div);
+} 
+
+
+/* delete a task */
+function delete_task(task_id) {
+    if (confirm("Delete task!") == true)
     {
-        delete_div(newDiv.id);
-    })
+        var task=document.getElementById(task_id);
+        task.parentNode.removeChild(task);
+        --task_count;
+    }
 }
-
-document.getElementById("submit").addEventListener("click", newTextBox);
