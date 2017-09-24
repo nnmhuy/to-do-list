@@ -1,0 +1,136 @@
+html, body {
+    height: 99%;
+    width: 99%;
+    margin: 0% 0.5%;
+}
+
+#big-div{
+    font-family: Verdana;
+    overflow: auto;
+    padding: 0;
+    border: 1px solid rgb(204, 204, 204);
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#heading-div{
+    padding: 5px;
+    background-color: rgb(57, 66, 78);
+    text-align: center;
+    color: white;
+}
+
+#tab-div{
+    overflow: hidden;
+    border: 1px solid rgb(204, 204, 204);
+    background-color: rgb(241, 241, 241);
+}
+
+#tab-div button{
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+
+#tab-div button:hover{
+    background-color: rgb(221, 221, 221);
+}
+
+
+#big-div div:nth-of-type(2) .tab-active{
+    background-color:rgb(204, 204, 204); 
+}
+
+
+#new-task-div, #tasks-list div {
+    position: relative;
+    width: 90%;
+    padding: 1% 5px;
+    border: 2px solid rgb(204, 204, 204);
+    border-radius: 10px;
+    margin: 1% 5% 1% 5%;
+    font-size :20px;
+}
+
+#new-task-div {
+    cursor: pointer;
+}
+
+#new-task-div:hover, #tasks-list > div:hover{
+    background-color: rgb(250, 250, 250);
+}
+
+#new-task-div {
+    text-align: center;
+}
+
+#add-button {
+    width: 25px;
+    height: 25px;
+}
+
+#active-new-task *{
+    vertical-align: middle;
+}
+
+#unactive-form{
+    display: none;
+}
+
+#active-form{
+    display: block;
+}
+
+#new-task-content {
+    font-size: 20px;
+    margin: 1%;
+    width: 90%;
+}
+
+.task {
+    text-align: left;
+}
+
+
+.undone-task{
+    font-weight: bold;
+}
+
+.done-task .task-content{
+    font-weight: normal;
+    text-decoration: line-through;
+}
+
+.checkbox {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0px auto 2px;
+    zoom: 1.5;
+}
+
+.task-content{
+    display: inline-block;
+    overflow: auto;
+    width: 89%;
+    margin: auto 5px auto 30px;
+}
+
+#del-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    float: right;
+    cursor: pointer;
+}

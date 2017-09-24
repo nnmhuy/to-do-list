@@ -4,7 +4,7 @@
         <title>To do list</title>
         <meta "charset=UTF-8">
         <link rel="stylesheet" href="style.css"/>
-        <script type="text/javascritp" src="./scripts.js" async></script>
+        <script type="text/javascript" src="./scripts.js" async></script>
     </head>
     <body>
         <div id="big-div">
@@ -12,20 +12,22 @@
                 <h1>To do list</h1>
             </div>
             <div id="tab-div">
-                <button class="tab">All</button>
+                <button class="tab tab-active">All</button>
                 <button class="tab">Done</button>
                 <button class="tab">Undone</button>
             </div>
             <div id="manage-task-div">
                 <div id="new-task-div">
                     <div id="active-new-task">
-                        <span id="new-tab">Click to add a new task</span>
-                        <img src="./add-button.png" alt="add-button" height="50px" width="50px"/>
+                        <span id="new-task">Click to add a new task</span>
+                        <img id="add-button" src="./add-button.png" alt="add-button"/>
                     </div>
-                    <input id="new-task-content" type="text" />
-                    <div "new-buttons">
-                        <button id="cancel-button">Cancel</button>
-                        <button id="save-button">Save</button>
+                    <div id="unactive-form">
+                        <textarea id="new-task-content" wrap="soft" rows="3"></textarea>
+                        <div id="new-buttons">
+                            <button id="cancel-button">Cancel</button>
+                            <button id="save-button">Save</button>
+                        </div>
                     </div>
                 </div>
                 <div id="tasks-list">
