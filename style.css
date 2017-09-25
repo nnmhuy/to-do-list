@@ -120,7 +120,7 @@ html, body {
 .task-content{
     display: inline-block;
     overflow: auto;
-    width: 89%;
+    width: 92%;
     margin: auto 5px auto 30px;
 }
 
