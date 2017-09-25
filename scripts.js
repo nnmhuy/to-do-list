@@ -30,6 +30,11 @@ document.getElementById("cancel-button").addEventListener("click",cancel);
 function save()
 {
     var input_text = document.getElementById("new-task-content");
+    if (input_text.value == "")
+    {
+        alert("Task can't be empty");
+        return;
+    }
     create_task(input_text.value);
     cancel();
 }
