@@ -11,7 +11,7 @@ function new_task()
     d.id = "active-form";
 }
 
-document.getElementById("new-task-div").addEventListener("click", new_task);
+document.getElementById("active-new-task").addEventListener("click", new_task);
 
 
 /* cancel new task */

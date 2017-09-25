@@ -49,18 +49,19 @@ html, body {
 }
 
 
-#new-task-div, #tasks-list div {
+#new-task-div {
     position: relative;
     width: 90%;
-    padding: 1% 5px;
+    /* padding: 1% 5px; */
     border: 2px solid rgb(204, 204, 204);
     border-radius: 10px;
     margin: 1% 5% 1% 5%;
     font-size :20px;
+    cursor: pointer;
 }
 
-#new-task-div {
-    cursor: pointer;
+#active-new-task {
+    padding: 1% 5px;    
 }
 
 #new-task-div:hover, #tasks-list > div:hover{
@@ -86,12 +87,28 @@ html, body {
 
 #active-form{
     display: block;
+    padding-bottom: 10px;
 }
 
 #new-task-content {
     font-size: 20px;
     margin: 1%;
     width: 90%;
+}
+
+textarea {
+    resize: none;
+}
+
+
+#tasks-list div {
+    position: relative;
+    width: 90%;
+    padding: 1% 5px;
+    border: 2px solid rgb(204, 204, 204);
+    border-radius: 10px;
+    margin: 1% 5% 1% 5%;
+    font-size :20px;
 }
 
 .task {
